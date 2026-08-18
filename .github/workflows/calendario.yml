@@ -1,0 +1,79 @@
+name: Calendário Acadêmico
+
+# Lê a página do DAE, baixa o PDF mais recente do Calendário Acadêmico de Graduação
+# (ano corrente + próximo, se já publicado), parseia, valida por simulação e faz upsert
+# na tabela `academic_calendars` do Supabase via Edge Function `events-admin`
+# (ação `calendar-upsert`, PIPELINE_TOKEN). O snapshot data/calendario-<ano>.json é
+# commitado via deploy key SSH — o push conta como atividade e impede o GitHub de
+# desabilitar os workflows agendados (regra dos 60 dias); o diff do JSON também é o
+# jeito de enxergar alterações do calendário no meio do ano.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Só parsear e validar (não grava no Supabase nem commita)"
+        type: boolean
+        default: false
+      year:
+        description: "Ano específico (vazio = ano corrente + próximo)"
+        type: string
+        default: ""
+  schedule:
+    - cron: "0 13 * * 1" # toda segunda 10:00 BRT (13:00 UTC)
+
+concurrency:
+  group: calendario
+  cancel-in-progress: false
+
+jobs:
+  calendario:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # Checkout via deploy key SSH (o GITHUB_TOKEN não conta como atividade). `ref: main`
+      # garante a ponta da branch mesmo em reruns.
+      - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.CALENDAR_COMMIT_SSH_KEY }}
+          ref: main
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - name: Testes
+        run: bun test
+      - name: Parsear e publicar
+        env:
+          EVENTS_ADMIN_URL: ${{ secrets.EVENTS_ADMIN_URL }}
+          EVENTS_ADMIN_TOKEN: ${{ secrets.EVENTS_ADMIN_TOKEN }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ inputs.year }}" ]; then ARGS="$ARGS --year ${{ inputs.year }}"; fi
+          bun src/index.ts $ARGS
+      - name: Commit do snapshot (keep-alive)
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "calendario-ufsc-bot"
+          git config user.email "calendario-ufsc-bot@users.noreply.github.com"
+          for i in 1 2 3; do
+            git fetch origin main
+            git stash push -u -- data >/dev/null 2>&1 || true
+            git checkout -B main origin/main
+            git stash pop >/dev/null 2>&1 || true
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > data/last-run.txt
+            git add data/
+            if git diff --cached --quiet; then
+              echo "Nada para commitar."
+              exit 0
+            fi
+            git commit -m "chore: atualiza calendário acadêmico ($(date -u +%F))"
+            if git push origin main; then
+              exit 0
+            fi
+            echo "Push falhou (corrida?); tentativa $i/3…"
+          done
+          echo "::error::Não foi possível pushar o snapshot."
+          exit 1

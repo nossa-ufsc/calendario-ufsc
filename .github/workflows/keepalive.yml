@@ -1,0 +1,39 @@
+name: Keep-alive
+
+# Rede de segurança para a regra dos 60 dias do GitHub (workflows agendados são
+# desativados após 60 dias sem commit de usuário). Normalmente o "Calendário Acadêmico"
+# já commita toda semana e mantém o repo ativo; este workflow é um backstop caso as
+# execuções falhem por várias semanas seguidas.
+#
+# Usa uma deploy key SSH (secrets.CALENDAR_COMMIT_SSH_KEY) — commits do GITHUB_TOKEN NÃO contam.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 4" # toda quinta 09:00 BRT (12:00 UTC)
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.CALENDAR_COMMIT_SSH_KEY }}
+          ref: main
+      - name: Heartbeat
+        run: |
+          git config user.name "calendario-ufsc-bot"
+          git config user.email "calendario-ufsc-bot@users.noreply.github.com"
+          for i in 1 2 3; do
+            git fetch origin main
+            git checkout -B main origin/main
+            mkdir -p data
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > data/keepalive.txt
+            git add data/keepalive.txt
+            git commit -m "chore: keep-alive $(date -u +%F)"
+            git push origin main && exit 0
+            echo "Push falhou; tentativa $i/3…"
+          done
+          exit 1

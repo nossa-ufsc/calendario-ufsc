@@ -1,0 +1,20 @@
+{
+  "name": "calendario-ufsc",
+  "version": "1.0.0",
+  "description": "Calendário Acadêmico de Graduação da UFSC (PDF do DAE) → JSON estruturado por semestre/campus → Supabase.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "calendario": "bun src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "unpdf": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "typescript": "^5.5.0"
+  }
+}

@@ -1,0 +1,582 @@
+[
+  {
+    "semester": "2024.1",
+    "campus": "ararangua",
+    "startDate": "2024-03-11",
+    "endDate": "2024-08-17",
+    "weeks": 23,
+    "recoveryStart": "2024-08-12",
+    "recoveryEnd": "2024-08-16",
+    "recessStart": "2024-08-18",
+    "classDaysByWeekday": [
+      23,
+      23,
+      21,
+      22,
+      21,
+      20
+    ],
+    "totalClassDays": 130,
+    "holidays": [
+      {
+        "date": "2024-03-29",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2024-04-03",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2024-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2024-05-04",
+        "label": "Dia da Padroeira da Cidade"
+      },
+      {
+        "date": "2024-05-30",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-03-30",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-05-31",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-06-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.1",
+    "campus": "blumenau",
+    "startDate": "2024-03-11",
+    "endDate": "2024-08-17",
+    "weeks": 23,
+    "recoveryStart": "2024-08-12",
+    "recoveryEnd": "2024-08-16",
+    "recessStart": "2024-08-18",
+    "classDaysByWeekday": [
+      23,
+      23,
+      22,
+      22,
+      21,
+      21
+    ],
+    "totalClassDays": 132,
+    "holidays": [
+      {
+        "date": "2024-03-29",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2024-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2024-05-30",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-03-30",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-05-31",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-06-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.1",
+    "campus": "curitibanos",
+    "startDate": "2024-03-11",
+    "endDate": "2024-08-17",
+    "weeks": 23,
+    "recoveryStart": "2024-08-12",
+    "recoveryEnd": "2024-08-16",
+    "recessStart": "2024-08-18",
+    "classDaysByWeekday": [
+      23,
+      22,
+      22,
+      22,
+      21,
+      21
+    ],
+    "totalClassDays": 131,
+    "holidays": [
+      {
+        "date": "2024-03-29",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2024-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2024-05-30",
+        "label": "Corpus Christi"
+      },
+      {
+        "date": "2024-06-11",
+        "label": "Aniversário da Cidade"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-03-30",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-05-31",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-06-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.1",
+    "campus": "florianopolis",
+    "startDate": "2024-03-11",
+    "endDate": "2024-08-17",
+    "weeks": 23,
+    "recoveryStart": "2024-08-12",
+    "recoveryEnd": "2024-08-16",
+    "recessStart": "2024-08-18",
+    "classDaysByWeekday": [
+      23,
+      23,
+      22,
+      22,
+      21,
+      20
+    ],
+    "totalClassDays": 131,
+    "holidays": [
+      {
+        "date": "2024-03-23",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2024-03-29",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2024-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2024-05-30",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-03-30",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-05-31",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-06-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.1",
+    "campus": "joinville",
+    "startDate": "2024-03-11",
+    "endDate": "2024-08-17",
+    "weeks": 23,
+    "recoveryStart": "2024-08-12",
+    "recoveryEnd": "2024-08-16",
+    "recessStart": "2024-08-18",
+    "classDaysByWeekday": [
+      23,
+      23,
+      22,
+      22,
+      21,
+      21
+    ],
+    "totalClassDays": 132,
+    "holidays": [
+      {
+        "date": "2024-03-29",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2024-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2024-05-30",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-03-30",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-05-31",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2024-06-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.2",
+    "campus": "ararangua",
+    "startDate": "2024-08-26",
+    "endDate": "2024-12-21",
+    "weeks": 17,
+    "recoveryStart": "2024-12-16",
+    "recoveryEnd": "2024-12-21",
+    "recessStart": "2024-12-22",
+    "classDaysByWeekday": [
+      16,
+      17,
+      16,
+      17,
+      16,
+      13
+    ],
+    "totalClassDays": 95,
+    "holidays": [
+      {
+        "date": "2024-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2024-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2024-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2024-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2024-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2024-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-12-07",
+        "label": "Vestibular UFSC"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.2",
+    "campus": "blumenau",
+    "startDate": "2024-08-26",
+    "endDate": "2024-12-21",
+    "weeks": 17,
+    "recoveryStart": "2024-12-16",
+    "recoveryEnd": "2024-12-21",
+    "recessStart": "2024-12-22",
+    "classDaysByWeekday": [
+      15,
+      17,
+      16,
+      17,
+      16,
+      13
+    ],
+    "totalClassDays": 94,
+    "holidays": [
+      {
+        "date": "2024-09-02",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2024-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2024-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2024-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2024-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2024-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2024-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-12-07",
+        "label": "Vestibular UFSC"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.2",
+    "campus": "curitibanos",
+    "startDate": "2024-08-26",
+    "endDate": "2024-12-21",
+    "weeks": 17,
+    "recoveryStart": "2024-12-16",
+    "recoveryEnd": "2024-12-21",
+    "recessStart": "2024-12-22",
+    "classDaysByWeekday": [
+      16,
+      17,
+      16,
+      17,
+      16,
+      13
+    ],
+    "totalClassDays": 95,
+    "holidays": [
+      {
+        "date": "2024-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2024-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2024-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2024-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2024-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2024-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-12-07",
+        "label": "Vestibular UFSC"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.2",
+    "campus": "florianopolis",
+    "startDate": "2024-08-26",
+    "endDate": "2024-12-21",
+    "weeks": 17,
+    "recoveryStart": "2024-12-16",
+    "recoveryEnd": "2024-12-21",
+    "recessStart": "2024-12-22",
+    "classDaysByWeekday": [
+      16,
+      17,
+      16,
+      17,
+      16,
+      13
+    ],
+    "totalClassDays": 95,
+    "holidays": [
+      {
+        "date": "2024-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2024-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2024-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2024-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2024-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2024-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-12-07",
+        "label": "Vestibular UFSC"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  },
+  {
+    "semester": "2024.2",
+    "campus": "joinville",
+    "startDate": "2024-08-26",
+    "endDate": "2024-12-21",
+    "weeks": 17,
+    "recoveryStart": "2024-12-16",
+    "recoveryEnd": "2024-12-21",
+    "recessStart": "2024-12-22",
+    "classDaysByWeekday": [
+      16,
+      17,
+      16,
+      17,
+      16,
+      13
+    ],
+    "totalClassDays": 95,
+    "holidays": [
+      {
+        "date": "2024-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2024-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2024-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2024-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2024-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2024-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2024-12-07",
+        "label": "Vestibular UFSC"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 192/2024/CUn",
+      "url": "http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calend%C3%A1rio-Acad%C3%AAmico-2024-final.pdf",
+      "sha256": "7f3ff47ddaeaa5267434fc7f197ead8681d9103f9740339b7b390c27a6aa639d",
+      "year": 2024,
+      "fetchedAt": "2026-08-18T20:54:52.270Z"
+    }
+  }
+]

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="SeTIC-UFSC" />
+    <meta name="generator" content="WordPress 4.7.4-RC1" />
+    <meta name="description" content="DAE" />
+    <meta name="copyright" content="Universidade Federal de Santa Catarina" />
+    <meta name="Keywords" content="universidade, federal, santa, catarina, a universidade, faculdade, estudantes, faculdade, ensino superior, licenciatura, mestrado, doutorado, pós-graduações, bolsas, candidatura ao ensino superior" />
+
+    <title>Departamento de Administração Escolar</title>        
+
+    <link rel="stylesheet" type="text/css" href="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/css/reset.css?ver=1786987201" />
+    <link rel="stylesheet" type="text/css" href="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/css/style.css?ver=1786987201" />
+    <link rel="alternate stylesheet" type="text/css" href="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/css/high.css?ver=1786987201" title="high" disabled="disabled" />
+            <link rel="shortcut icon" type="image/x-icon" href="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/img/favicon.ico?ver=1786987201"/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+    <script src="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/modernizr-2.7.min.js?ver=1786987201"></script>
+    <script src="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/font-resizer.js?ver=1786987201"></script>           
+
+
+    <link rel='dns-prefetch' href='//dae.ufsc.br' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/dae.ufsc.br\/wp-includes\/js\/wp-emoji.js?ver=4.7.4-RC1","twemoji":"https:\/\/dae.ufsc.br\/wp-includes\/js\/twemoji.js?ver=4.7.4-RC1"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var stringFromCharCode = String.fromCharCode,
+			flag, flag2, technologist, technologist2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56826, 55356, 56819 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'emoji4':
+				/*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 8205, 55357, 56507), 0, 0 );
+				technologist = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 55357, 56507), 0, 0 );
+				technologist2 = canvas.toDataURL();
+
+				return technologist !== technologist2;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji4' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='dashicons-css'  href='https://dae.ufsc.br/wp-includes/css/dashicons.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='https://dae.ufsc.br/wp-includes/js/thickbox/thickbox.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='patrocinio-css'  href='https://dae.ufsc.br/wp-content/plugins/patrocinio/patrocinio.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='ufsc-carrossel-css'  href='https://dae.ufsc.br/wp-content/plugins/ufsc-carrossel/ufsc-carrossel.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='https://dae.ufsc.br/wp-content/mu-plugins/jquery-collapse-o-matic/style.css?ver=1.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://dae.ufsc.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sharity-style-css'  href='https://dae.ufsc.br/wp-content/plugins/email-sharity/style/sharity-style.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='auto-thickbox-css'  href='https://dae.ufsc.br/wp-content/plugins/auto-thickbox/css/styles-pre39.css?ver=20140420' type='text/css' media='all' />
+<link rel='stylesheet' id='dry_awp_theme_style-css'  href='https://dae.ufsc.br/wp-content/plugins/advanced-wp-columns/assets/css/awp-columns.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<style id='dry_awp_theme_style-inline-css' type='text/css'>
+@media screen and (max-width: 1024px) {	.csColumn {		clear: both !important;		float: none !important;		text-align: center !important;		margin-left:  10% !important;		margin-right: 10% !important;		width: 80% !important;	}	.csColumnGap {		display: none !important;	}}
+</style>
+<link rel='stylesheet' id='jquery-ui-smoothness-css'  href='https://dae.ufsc.br/wp-content/plugins/contact-form-7/includes/js/jquery-ui/themes/smoothness/jquery-ui.min.css?ver=1.11.4' type='text/css' media='screen' />
+<link rel='stylesheet' id='institucional-departamentos-css'  href='https://dae.ufsc.br/wp-content/plugins/institucional-departamentos/institucional-departamentos.css?ver=4.7.4-RC1' type='text/css' media='all' />
+<link rel='stylesheet' id='slideshow-css3-css'  href='https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/pikachoose/styles/css3.css?ver=0.5' type='text/css' media='screen' />
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/mu-plugins/jquery-collapse-o-matic/collapse.min.js?ver=1.3.5'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/functions.js?ver=4.7.4-RC1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/ufsc.js?ver=4.7.4-RC1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/pikachoose/lib/jquery.pikachoose.js?ver=4.7.4-RC1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/themes/brasilGovInterno/js/pikachoose/lib/jquery.jcarousel.min.js?ver=4.7.4-RC1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/plugins/email-sharity/js/sharity.js?ver=4.7.4-RC1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/plugins/email-sharity/fancybox/source/jquery.fancybox.pack.js?v=2.1.4&#038;ver=4.7.4-RC1'></script>
+<link rel='https://api.w.org/' href='https://dae.ufsc.br/wp-json/' />
+<link rel='shortlink' href='https://dae.ufsc.br/?p=1152' />
+<link rel="alternate" type="application/json+oembed" href="https://dae.ufsc.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdae.ufsc.br%2Fcalendario-academico-de-graduacao%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://dae.ufsc.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdae.ufsc.br%2Fcalendario-academico-de-graduacao%2F&#038;format=xml" />
+ 
+    <link href="/wp-content/mu-plugins/videojs/video-js.min.css" rel="stylesheet" />
+    <script src="/wp-content/mu-plugins/videojs/video.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+    _V_.options.flash.swf = "/wp-content/mu-plugins/videojs/video-js.swf";
+  </script>
+
+    
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Próximo &gt;","prev":"&lt; Anterior","image":"Imagem","of":"de","close":"Fechar","loadingAnimation":"https:\/\/dae.ufsc.br\/wp-content\/plugins\/auto-thickbox\/images\/loadingAnimation.gif"};
+try{convertEntities(thickboxL10n);}catch(e){};;
+/* ]]> */
+</script>
+<meta name="gm-gpx-v" content="1.25" />
+	  <script type="text/javascript">jQuery.noConflict();</script>
+	  </head>
+<div id="barra-brasil">
+    <div id="barra-brasil">
+        <div id="wrapper-barra-brasil">
+            <script src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+        </div>
+    </div>
+</div>
+
+<div id="wrapper">
+    <header id="header">
+            <div id="header_grid" class="grid">
+            <div>
+                <ul id="shortcuts" class="hide_mobile">
+                    <li><a accesskey="1" href="#conteudo">Ir para o conteúdo <span>1</span></a></li>
+                    <li><a accesskey="2" href="#menu">Ir para o menu <span>2</span></a></li>
+                    <li><a accesskey="3" href="#busca">Ir para a busca <span>3</span></a></li>
+                    <li><a accesskey="4" href="#rodape">Ir para o rodapé <span>4</span></a></li>
+                </ul>
+                <ul id="topbar">
+                    <li><a accesskey="7" href="http://ufsc.br/acessibilidade/">Acessibilidade</a></li>
+                    <li><a accesskey="8" href="#" id="contrast">Alto Contraste</a></li>
+                    <li><a accesskey="9" href="/mapa-do-site">Mapa do Site</a></li>
+                </ul>
+                <div id="logo">
+                    <a href="https://dae.ufsc.br" accesskey="0" id="portal-logo">
+                        <img id="brasaoUfsc_Header" src="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/img/brasao_site_ufsc.svg?ver=1786987201" alt="Brasão da UFSC: A parte central do brasão é composta por uma flâmula. Ela é azul na porção superior e amarela na inferior. Sobre o azul, à esquerda, cinco estrelas brancas formam o cruzeiro do sul; à direita, uma faixa branca tem o texto escrito em vermelho: ars et scientia. Centralizada na parte amarela, há uma roda dentada vermelha quebrada na seção inferior. Duas folhas verdes de palma estão encaixadas no eixo da roda. Uma folha pende para o lado direito e a outra para o lado esquerdo. Atrás da flâmula há uma tocha amarela, da qual enxergamos os extremos: acima, com o fogo desenhado em vermelho, e abaixo, a parte inferior do bastão. Do lado esquerdo da flâmula, há um ramo verde de carvalho e do lado direito um ramo verde de louro. A parte inferior do brasão é composta por uma faixa estreita vermelha, escrito em branco: Universidade Federal de Santa Catarina. Abaixo da faixa, escrito em fonte maiúscula azul: UFSC."/>
+                        <h1>Departamento de Administração Escolar</h1>
+                    </a>
+                </div>
+                <form action="/" method="get" name="busca">
+                    <input type="text" placeholder="Buscar no portal" id="s" name="s"/>
+                    <input type="submit" id="submit" value="" />
+                </form>
+                <ul id="social" class="hide_mobile">
+                    <li><a href="" title="Curta no Facebook" class="icon-facebook"></a></li>
+                    <li><a href="https://twitter.com/ufsc" title="Siga no Twitter" class="icon-twitter"></a></li>
+                    <li><a href="https://www.youtube.com/user/tvufsc" title="Vídeos no Youtube" class="icon-youtube"></a></li>
+                    <li><a href="https://www.instagram.com/universidadeufsc" title="Veja no Instagram" class="icon-camera"></a></li>
+                    <li><a href="/feed" title="Assine as atualizações via RSS" class="icon-feed"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="menu-nav">
+            <ul>
+                <li id="menu-link-nav-acessoRestrito">
+                    <a href="http://dae.paginas.ufsc.br/wp-admin">
+                        Área Restrita                    </a>
+                    <a href="/?administradores" class="thickbox" title="Lista de Administradores deste Site">
+                        Administradores do Site                    </a>
+                </li>
+            </ul>
+            <a href="#dropmenu" class="menu-link"><span aria-hidden="true" class="icon-menu"></span> Menu</a>
+                    </div>
+    </header>
+    <section id="home" class="grid section group clearfix ">
+
+
+
+
+
+
+
+
+
+
+                
+<section id="home" class="section group clearfix">  
+
+    <div id="sidebar_left" name="menu">
+    <div id="menu_secundario_logo" class="hide_mobile">
+                <a id="atalho-navegacao" href="https://dae.ufsc.br">
+            <img src="https://dae.ufsc.br/wp-content/themes/brasilGovInterno/img/brasao_default.png" alt="Menu de Navegação"/>
+        </a>
+    </div>
+
+    <ul role='navigation'>
+        <li>
+            <dl id='margin_space'>
+                <div class="pagenav"><ul id="menu--navega" class="pagenav"><li id="menu-item-541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541"><a  href="http://dae.paginas.ufsc.br/">Início</a></li>
+<li id="menu-item-539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a  href="https://dae.ufsc.br/equipe/">Equipe</a></li>
+<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a  href="https://dae.ufsc.br/competencias/">Competências</a></li>
+<li id="menu-item-795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-795"><a  href="http://dae.paginas.ufsc.br/formularios/">Formulários</a></li>
+<li id="menu-item-760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-760"><a  href="https://cagr.sistemas.ufsc.br/modules/aluno/">Portal do aluno</a></li>
+<li id="menu-item-1011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1011"><a  href="https://acesso.egestao.ufsc.br/atendimento/">Consultar Processos</a></li>
+<li id="menu-item-4904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4904"><a  href="https://prograd.ufsc.br/cursos-de-graduacao-da-ufsc">Cursos de Graduação</a></li>
+<li id="menu-item-1155" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1152 current_page_item menu-item-1155"><a  href="https://dae.ufsc.br/calendario-academico-de-graduacao/">Calendário Acadêmico de Graduação</a></li>
+</ul></div>            </dl>
+        </li>
+    </ul>
+    <ul id="nav_menu-6" class="widget widget_nav_menu"><li><h2>Editais</h2><div class="pagenav"><ul id="menu--editais" class="menu"><li id="menu-item-562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-562"><a >Chamadas &raquo;</a>
+<ul>
+	<li id="menu-item-592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-592"><a >COPERVE &raquo;</a>
+	<ul>
+		<li id="menu-item-7105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7105"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2026/">Chamadas Vestibular UFSC 2026</a></li>
+		<li id="menu-item-6217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6217"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2025/">Chamadas Vestibular UFSC 2025</a></li>
+		<li id="menu-item-5770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5770"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2024/">Chamadas Vestibular UFSC 2024</a></li>
+		<li id="menu-item-4574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4574"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2023/">Chamadas Vestibular UFSC 2023</a></li>
+		<li id="menu-item-4016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4016"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2022/">Chamadas Vestibular UFSC 2022</a></li>
+		<li id="menu-item-3388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3388"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2021/">Chamadas Vestibular UFSC 2021</a></li>
+		<li id="menu-item-2374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2374"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2020/">Chamadas Vestibular UFSC 2020</a></li>
+		<li id="menu-item-1984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1984"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2019/">Chamadas Vestibular UFSC 2019</a></li>
+		<li id="menu-item-1085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1085"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2018/">Chamadas Vestibular UFSC 2018</a></li>
+		<li id="menu-item-605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-605"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2017/">Chamadas Vestibular UFSC 2017</a></li>
+		<li id="menu-item-943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-943"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2016/">Chamadas Vestibular UFSC 2016</a></li>
+		<li id="menu-item-998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-998"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2015/">Chamadas Vestibular UFSC 2015</a></li>
+		<li id="menu-item-611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-611"><a  href="http://notes.ufsc.br/aplic/comunica.nsf?OpenDatabase">Anteriores</a></li>
+	</ul>
+</li>
+	<li id="menu-item-813" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-813"><a >COPERVE &#8211; EaD &raquo;</a>
+	<ul>
+		<li id="menu-item-6411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6411"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2025-ead/">Chamadas Vestibular UFSC 2025 – EaD</a></li>
+		<li id="menu-item-5809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5809"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2024-ead/">Chamadas Vestibular UFSC 2024 – EaD</a></li>
+		<li id="menu-item-4994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4994"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2023-ead/">Chamadas Vestibular UFSC 2023 – EaD</a></li>
+		<li id="menu-item-4988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4988"><a  href="https://dae.ufsc.br/chamadas-vestibular-ufsc-2017-ead/">Chamadas Vestibular UFSC 2017 – EaD</a></li>
+	</ul>
+</li>
+	<li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-591"><a >SISU &raquo;</a>
+	<ul>
+		<li id="menu-item-7499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7499"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2026/">Chamadas SISU/UFSC 2026</a></li>
+		<li id="menu-item-6263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6263"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2025/">Chamadas SISU/UFSC 2025</a></li>
+		<li id="menu-item-5757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5757"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2024/">Chamadas SISU/UFSC 2024</a></li>
+		<li id="menu-item-4694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4694"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2023/">Chamadas SISU/UFSC 2023</a></li>
+		<li id="menu-item-4015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4015"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2022/">Chamadas SISU/UFSC 2022</a></li>
+		<li id="menu-item-3389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3389"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2021/">Chamadas SISU/UFSC 2021</a></li>
+		<li id="menu-item-2406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2406"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2020/">Chamadas SISU/UFSC 2020</a></li>
+		<li id="menu-item-1983" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1983"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2019/">Chamadas SISU/UFSC 2019</a></li>
+		<li id="menu-item-1118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1118"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2018/">Chamadas SISU/UFSC 2018</a></li>
+		<li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2017/">Chamadas SISU/UFSC 2017</a></li>
+		<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2016/">Chamadas SISU/UFSC 2016</a></li>
+		<li id="menu-item-1016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1016"><a  href="https://dae.ufsc.br/chamadas-sisuufsc-2015/">Chamadas SISU/UFSC 2015</a></li>
+		<li id="menu-item-610" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-610"><a  href="http://notes.ufsc.br/aplic/comunica.nsf?OpenDatabase">Anteriores</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-8088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8088"><a  href="https://dae.ufsc.br/transferencias-e-retornos/">Admissão por Transferências e Retornos</a></li>
+</ul></div></li></ul><ul id="nav_menu-8" class="widget widget_nav_menu"><li><h2>Orientações Gerais</h2><div class="pagenav"><ul id="menu--orientacoes-gerais" class="menu"><li id="menu-item-4809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4809"><a  href="https://dae.ufsc.br/orientacoes-para-os-principais-servicos-prestados-pelo-dae/">Principais Serviços Prestados pelo DAE</a></li>
+<li id="menu-item-4811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4811"><a  href="https://dae.ufsc.br/perguntas-frequentes/">Perguntas Frequentes</a></li>
+</ul></div></li></ul><ul id="nav_menu-12" class="widget widget_nav_menu"><li><h2>CADASTRO E MATRICULA DA GRADUAÇÃO</h2><div class="pagenav"><ul id="menu--cadastro-e-matricula-da-graduacao" class="menu"><li id="menu-item-8089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8089"><a  href="https://dae.ufsc.br/transferencias-e-retornos/">Admissão por Transferências e Retornos</a></li>
+<li id="menu-item-7705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7705"><a  href="https://dae.ufsc.br/cancelamento-de-matricula/">Cancelamento de Matrícula</a></li>
+<li id="menu-item-7706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7706"><a  href="https://dae.ufsc.br/disciplina-isolada/">Disciplina Isolada / Aluno Ouvinte</a></li>
+<li id="menu-item-7698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7698"><a  href="https://dae.ufsc.br/orientacoes-uso-de-nome-social/">Orientações para Solicitação de Uso de Nome Social no Sistema CAGR</a></li>
+<li id="menu-item-7800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7800"><a  href="https://dae.ufsc.br/mobilidade-academica/">Mobilidade Acadêmica (ANDIFES)</a></li>
+<li id="menu-item-7702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7702"><a  href="https://dae.ufsc.br/validacao-de-disciplinas-area-da-coordenadoria/">Validação de Disciplinas – Área da Coordenadoria</a></li>
+<li id="menu-item-7703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7703"><a  href="https://dae.ufsc.br/validacao-de-disciplinas-area-do-aluno/">Validação de Disciplinas – Área do Aluno</a></li>
+</ul></div></li></ul><ul id="nav_menu-10" class="widget widget_nav_menu"><li><h2>Revalidação / Reconhecimento de Diploma Estrangeiro</h2><div class="pagenav"><ul id="menu--revalidacaoreconhecimento-de-diploma-estrangeiro" class="menu"><li id="menu-item-7685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7685"><a  href="https://dae.ufsc.br/revalidacao-de-diploma-de-graduacao-estrangeiro/">Revalidação de diploma para todos os cursos de graduação (exceto Medicina)</a></li>
+<li id="menu-item-7985" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7985"><a  href="https://dae.ufsc.br/revalidacao-de-diploma-de-graduacao-estrangeiro-medicina/">Revalidação de Diploma de Graduação &#8211; MEDICINA</a></li>
+<li id="menu-item-7867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7867"><a  href="https://dae.ufsc.br/perguntas-frequentes-sobre-a-revalidacao-de-diplomas-na-ufsc/">FAQ &#8211; Revalidação</a></li>
+<li id="menu-item-7689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7689"><a  href="https://dae.ufsc.br/reconhecimento-de-diploma-de-pos-graduacao/">Reconhecimento de Diploma de Pós-Graduação</a></li>
+</ul></div></li></ul><ul id="nav_menu-13" class="widget widget_nav_menu"><li><h2>Diplomas &#8211; Graduação</h2><div class="pagenav"><ul id="menu--diplomas-graduacao" class="menu"><li id="menu-item-7712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7712"><a  href="https://dae.ufsc.br/solicitacao-de-2a-via-de-diploma/">Solicitação de 2ª Via de Diploma: Graduação</a></li>
+<li id="menu-item-7707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7707"><a  href="https://dae.ufsc.br/verificacao-de-autenticidade-de-diploma/">Verificação de Autenticidade de Diplomas e Certidões &#8211; Graduação</a></li>
+</ul></div></li></ul><ul id="nav_menu-11" class="widget widget_nav_menu"><li><h2>Diplomas e Certificados &#8211; Pós-Graduação</h2><div class="pagenav"><ul id="menu--diplomas-e-certificados-pos-graduacao" class="menu"><li id="menu-item-7692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7692"><a  href="https://dae.ufsc.br/dierdpos-divisao-de-expedicao-e-registro-de-diplomas-de-pos-graduacao/">Informações SERDI/PÓS</a></li>
+<li id="menu-item-7690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7690"><a  href="https://dae.ufsc.br/diplomas-mestrado-e-doutorado/">Diplomas (Mestrado e Doutorado)</a></li>
+<li id="menu-item-7691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7691"><a  href="https://dae.ufsc.br/certificados-de-especializacao-e-residencia/">Certificados de Especialização e Residência</a></li>
+<li id="menu-item-7730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7730"><a  href="https://dae.ufsc.br/verificacao-de-autenticidade-de-diplomas-certificados-e-certidoes-pos-graduacao/">Verificação de Autenticidade de Diplomas, Certificados e Certidões (Pós-Graduação)</a></li>
+<li id="menu-item-7715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7715"><a  href="https://dae.ufsc.br/solicitacao-de-2a-via-pos-graduacao/">Solicitação de 2ª Via de Diploma: Pós-Graduação</a></li>
+</ul></div></li></ul><ul id="linkcat-0" class="widget widget_links"><li><h2>Favoritos</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://paginas.ufsc.br/">Paginas@UFSC</a></li>
+<li><a href="http://setic.ufsc.br/">SeTIC</a></li>
+<li><a href="http://www.ufsc.br/">UFSC</a></li>
+
+	</ul>
+</li></ul>
+</div>
+<script>
+    "use strict";
+    var menus = document.querySelectorAll(".widget_nav_menu > li");
+    for(var i = 0; i < menus.length; i++) {
+        if(menus[i].children.length == 1) {
+            menus[i].remove();
+        }
+    }
+</script>
+	<div class="col" name="conteudo">
+	    <section id="content">
+
+    
+        <ul id="breadcrumbs" class="hide_mobile"><li><a href="https://dae.ufsc.br" title="Ir para a página inicial" class="home"><span aria-hidden="true" class="icon-home"></span></a></li><li><a href="https://dae.ufsc.br/calendario-academico-de-graduacao/" class="current">Calendário Acadêmico de Graduação</a></li></ul>
+        
+            <article class="post" id="post-1152">
+                <h2><a href="https://dae.ufsc.br/calendario-academico-de-graduacao/">Calendário Acadêmico de Graduação</a></h2>
+
+                <div class="meta_header clearfix">
+                                                        </div>
+
+                <div class="content clearfix">
+
+                    <p><a href="https://dae.ufsc.br/files/2025/11/R214-CUn-2025_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2026.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2026</a> &#8211; Resolução nº 214/2025/CUn  de 28 de outubro de 2025.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2025/07/RN-196-CUn-2024_Calend%C3%A1rio-Acad%C3%AAmico-2025_altera%C3%A7%C3%B5es-homologadas-R-3-CUn-2025-e-R-206-CUn-2025.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2025</a> &#8211; Resolução nº 196/2024/CUn  de 26 de novembro de 2024, com alterações homologadas pela Resolução nº 3/2025/CUn de 18 de março de 2025 e Resolução nº 206/2025/CUn de 01 de julho de 2025.</p>
+<p><a href="http://dae.paginas.ufsc.br/files/2025/04/RN-196-CUn-2024_Calendário-Acadêmico-2025_alterações-homologadas-R-3-CUn-2025.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2025</a> &#8211; Resolução nº 196/2024/CUn  de 26 de novembro de 2024, com alterações homologadas pela Resolução nº 3/2025/CUn de 18 de março de 2025.</p>
+<p><a href="https://dae.ufsc.br/files/2024/11/R196-CUn-2024_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2025.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2025</a> &#8211; Resolução nº 196/2024/CUn  de 26 de novembro de 2024.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2024/07/RN-192-Ajuste-Calendário-Acadêmico-2024-final.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2024</a> &#8211; Resolução nº 192/CUn/2024  de 12 de julho de 2024 altera a Resolução nº 183/2023/CUn  de 31 de outubro de 2023.</p>
+<p><a href="https://dae.ufsc.br/files/2023/11/R183-CUn-2023_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2024.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2024</a> &#8211; Resolução nº 183/2023/CUn  de 31 de outubro de 2023.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2022/11/R174-CUn_2022_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o-2023.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2023</a> &#8211; Resolução nº 174/2022/CUn  de 08 de novembro de 2022.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2021/11/R157-CUn_2021_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o-2022.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2022</a> &#8211; Resolução nº 157/CUn/2021  de 12 de novembro de 2021.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2021/04/R06CUn2021-Calend%C3%A1rio-Suplementar-Excepcional-de-Gradua%C3%A7%C3%A3o-2021.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação 2021</a> &#8211; Resolução nº 06/2021/CUn,  de 30 de março de 2021, com o Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação, referente ao primeiro e segundo semestres letivos de 2021.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2020/12/R30CUn2020-Calend%C3%A1rio-Suplementar-Excepcional-de-Gradua%C3%A7%C3%A3o-2020-2.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação, referente ao segundo semestre letivo de 2020</a> &#8211; Resolução nº 30/CUn/2020,  de 01 de dezembro de 2020, com o Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação, referente ao segundo semestre letivo de 2020 (semestre 2020.2).</p>
+<p><a href="https://dae.ufsc.br/files/2020/08/R12CUn2020-Calend%C3%A1rio-Suplementar-Excepcional-de-Gradua%C3%A7%C3%A3o-2020-1-.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação, referente ao primeiro semestre letivo de 2020</a> &#8211; Resolução nº 12/CUn/2020,  de 18 de agosto de 2020, com o Calendário Acadêmico Suplementar Excepcional dos Cursos de Graduação, referente ao primeiro semestre letivo de 2020 (semestre 2020.1).</p>
+<p><a href="https://dae.ufsc.br/files/2019/12/R21CUn2019-Calend%C3%A1rio-de-Gradua%C3%A7%C3%A3o-2020.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2020</a> &#8211; Resolução nº 21/CUn/2019  de 26 de novembro de 2019.</p>
+<hr />
+<p><a href="https://dae.ufsc.br/files/2019/11/R25CUn2018-Calend%C3%A1rio-de-Gradua%C3%A7%C3%A3o-2019-com-altera%C3%A7%C3%B5es-da-Resolu%C3%A7%C3%A3o-020-2019-CUn.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2019</a> &#8211; Resolução nº 25/CUn/2018  de 05 de novembro de 2018 alterada pela Resolução 020/CUn/2019, de 5 de novembro de 2019.</p>
+<p><a href="https://dae.ufsc.br/files/2018/11/R25CUn2018-Calend%C3%A1rio-de-Gradua%C3%A7%C3%A3o-2019.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2019</a> &#8211; Resolução nº 25/CUn/2018  de 05 de novembro de 2018.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R19_CUn2017_alterada_pela_Resolução_06_CUn2018.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2018</a> &#8211; Resolução nº 19/CUn/2017  de 28 de novembro de 2017 alterada pela Resolução nº 06/CUn/2018 de 05 de junho de 2018.</p>
+<p><a href="http://dae.paginas.ufsc.br/files/2017/12/R19CUn2017-Calendário-de-Graduação-2018.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2018</a> &#8211; Resolução nº 19/CUn/2017  de 28 de novembro de 2017.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2017/04/R56CUn2016-Calendário-de-Graduação-2017.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2017</a> &#8211; Resolução nº 56/CUn/2016  de 25 de outubro de 2016.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R12CUn2016-Calendário-de-Graduação-2016.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2016</a> &#8211; Resolução nº 12/CUn/2016  de 26 de abril de 2016 &#8211;  Altera a Resolução nº 42/CUn/2015 no que diz respeito à data de aplicação das provas de Vestibular 2017 e aos dias letivos do segundo semestre de 2016.</p>
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R42CUn2015-Calendário-de-Graduação-2016.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2016</a> &#8211; Resolução nº 42/CUn/2015  de 08 de dezembro de 2015.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R14CUn2015-Calendário-de-Graduação-2015-Blumenau.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2015 &#8211; Campus Blumenau</a>  &#8211; Resolução nº 14/CUn/2015  de 13 de agosto de 2015.</p>
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R19CUn2014-Calendário-de-Graduação-2015.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2015</a> &#8211; Resolução nº 19/CUn/2014  de 27 de novembro de 2014.</p>
+<hr />
+<p><a href="http://dae.paginas.ufsc.br/files/2018/04/R34CUn2013-Calendário-de-Graduação-2014.pdf" target="_blank" rel="noopener noreferrer">Calendário Acadêmico de Graduação 2014</a> &#8211; Resolução nº 34/CUn/2013  de 26 de novembro de 2013.</p>
+<hr />
+<p><a href="http://notes.ufsc.br/aplic/calgrad.nsf?OpenDatabase" target="_blank" rel="noopener noreferrer">Calendários Anteriores</a></p>
+<hr />
+<p>&nbsp;</p>                                    </div>
+                                        
+            </article>
+
+                    
+    
+        
+    
+        </article>
+
+</section>
+	</div>
+
+	<div id="sidebar_right">
+<div id="text-2" class="widget widget_text"><h2>Links úteis</h2>			<div class="textwidget"><p><font size="2">- <a href="http://cagr.sistemas.ufsc.br/">CAGR</a><br />
+- <a href="http://ufsc.br/">UFSC</a><br />
+- <a href="http://prae.ufsc.br/">PRAE</a><br />
+- <a href="http://prograd.ufsc.br/">PROGRAD</a><br />
+- <a href="http://telefones.ufsc.br/">Catálogo Telefônico da UFSC</a><br />
+</font></p>
+</div>
+		</div>    <ul id='pu-contatos' class="last">
+        <li><h2>Contatos</h2>
+            <p>
+                DEPARTAMENTO DE ADMINISTRAÇÃO ESCOLAR (DAE)<br />
+<br />
+ATENDIMENTO:<br />
+De segunda a sexta-feira<br />
+Das 07:00 às 19:00 horas<br />
+<br />
+E-MAIL e TELEFONE POR ASSUNTO (antes de entrar em contato, verifique se as informações que você procura encontram-se em ORIENTAÇÕES, localizado no lado esquerda da página):<br />
+<br />
+1) Matrícula, chamadas (vestibular, sisu, outros) de processos seletivos, histórico escolar, espelho de matrícula, atestado de matrícula, transferências e retornos, mobilidade acadêmica e atualização de dados cadastrais:<br />
+dicam.dae@contato.ufsc.br<br />
+(48) 3721-7406 / 3721-7388 / 3721-7408<br />
+<br />
+2) Diplomas de Graduação:<br />
+dierd.dae@contato.ufsc.br<br />
+(48) 3721-7407 / 3721-7396 / 3721-7398 / 3721-7404 / 3721-7409<br />
+<br />
+3) Diplomas/Certificados de Pós-Graduação:<br />
+dierdpos.dae@contato.ufsc.br<br />
+(48) 3721-2199 / 3721-7401<br />
+<br />
+4) Revalidação de diplomas estrangeiros de graduação:<br />
+revalidadiploma.dae@contato.ufsc.br<br />
+(48) 3721-7402 / (48) 3721-7387 / (48) 3721-6437<br />
+<br />
+5) Outros assuntos não listados nos itens 1, 2, 3 e 4 acima:<br />
+dae@contato.ufsc.br<br />
+(48) 3721-7402 / (48) 3721-7387 / (48) 3721-6437<br />
+<br />
+ENDEREÇO:<br />
+Sala 01 (andar térreo), salas 102 e 103 (1º andar)   -   Prédio Reitoria II<br />
+Rua Desembargador Vitor Lima, 222 - Campus Universitário - Trindade - Florianópolis - Santa Catarina - CEP 88040-400            </p>
+        </li>
+    </ul>
+
+</div>
+
+
+</section>
+
+<footer id="footer" class="clearfix" name="footer">
+    <section id="rodape">
+        <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+        <div id="footer_links" class="grid clearfix" name="footer_links">
+                    <div id="sponsors">
+                    <dl>
+                <dt>
+                    <a href="http://setic.ufsc.br" target="_blank"><img src="https://dae.ufsc.br/wp-content/plugins/patrocinio/setic_ufsc.png"  alt="SeTIC" /></a>
+                </dt>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>
+                    <a href="http://paginas.ufsc.br" target="_blank"><img src="https://dae.ufsc.br/wp-content/plugins/patrocinio/pag_ufsc.png" alt="Páginas UFSC" /></a>
+                </dt>
+                <dd></dd>
+            </dl>
+                </div>
+                </div>
+        <div id="footer-brasil"></div>
+    </section>
+</footer>
+
+<div class="extra-footer">
+    <ul>
+        <li> Desenvolvido com o CMS de código aberto <a href="https://br.wordpress.org/.org">Wordpress</a></li>
+        <li class="last-update">Última atualização do site foi em 18 de agosto 2026 - 0:22:03</li>
+    </ul>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-2LJ98VTMN0'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2LJ98VTMN0');
+</script>
+
+<script src='https://google-analytics.com/ga.js'></script>
+<script type='text/javascript'>
+var pageTracker2 = _gat._getTracker('');
+pageTracker2._initData();
+pageTracker2._trackPageview();
+</script><script type='text/javascript' src='https://dae.ufsc.br/wp-content/plugins/auto-thickbox/js/auto-thickbox.min.js?ver=20150514'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/dae.ufsc.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"jqueryUi":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"d \\dd\\e MM \\dd\\e yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/spinner.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-content/plugins/institucional-departamentos/institucional.departamentos.js?ver=1'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://dae.ufsc.br/wp-includes/js/wp-embed.js?ver=4.7.4-RC1'></script>
