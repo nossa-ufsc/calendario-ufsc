@@ -7,8 +7,8 @@ const BROWSER_UA =
 
 // Sites da UFSC podem ser lentos a partir dos runners do GitHub (EUA) — timeout
 // generoso e retry com backoff para absorver instabilidade transitória.
-const TIMEOUT_MS = 60_000;
-const TENTATIVAS = 3;
+const TIMEOUT_MS = 240_000;
+const TENTATIVAS = 4;
 
 async function request(url: string): Promise<Response> {
   let ultimoErro: unknown;
