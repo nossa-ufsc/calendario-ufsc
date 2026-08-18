@@ -18,15 +18,13 @@ export function adminConfigDoAmbiente(): AdminConfig | null {
 export async function upsertCalendarios(cfg: AdminConfig, calendars: SemesterCalendar[]) {
   const res = await fetch(cfg.url, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: `Bearer ${cfg.token}` },
+    headers: { 'content-type': 'application/json', 'x-admin-token': cfg.token },
     body: JSON.stringify({ action: 'calendar-upsert', calendars }),
     signal: AbortSignal.timeout(60_000),
   });
   const body = await res.text();
   if (!res.ok) throw new Error(`calendar-upsert falhou: HTTP ${res.status} ${body.slice(0, 500)}`);
-  try {
-    return JSON.parse(body) as { ok: boolean; upserted: number };
-  } catch {
-    return { ok: true, upserted: calendars.length };
-  }
+  const parsed = JSON.parse(body) as { ok: boolean; output?: string; error?: string };
+  if (!parsed.ok) throw new Error(`calendar-upsert falhou: ${parsed.error ?? body.slice(0, 500)}`);
+  return { ok: true, upserted: calendars.length, output: parsed.output ?? '' };
 }
