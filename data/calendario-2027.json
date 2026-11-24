@@ -1,0 +1,710 @@
+[
+  {
+    "semester": "2027.1",
+    "campus": "ararangua",
+    "startDate": "2027-03-01",
+    "endDate": "2027-07-09",
+    "weeks": 19,
+    "recoveryStart": "2027-07-05",
+    "recoveryEnd": "2027-07-09",
+    "recessStart": "2027-07-10",
+    "classDaysByWeekday": [
+      19,
+      18,
+      18,
+      18,
+      17,
+      14
+    ],
+    "totalClassDays": 104,
+    "holidays": [
+      {
+        "date": "2027-03-26",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2027-04-03",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2027-04-21",
+        "label": "Tiradentes"
+      },
+      {
+        "date": "2027-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2027-05-04",
+        "label": "Dia da Padroeira da Cidade"
+      },
+      {
+        "date": "2027-05-27",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-03-27",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-05-28",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-05-29",
+        "label": "Dias não letivos"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.1",
+    "campus": "blumenau",
+    "startDate": "2027-03-01",
+    "endDate": "2027-07-09",
+    "weeks": 19,
+    "recoveryStart": "2027-07-05",
+    "recoveryEnd": "2027-07-09",
+    "recessStart": "2027-07-10",
+    "classDaysByWeekday": [
+      19,
+      19,
+      18,
+      18,
+      17,
+      15
+    ],
+    "totalClassDays": 106,
+    "holidays": [
+      {
+        "date": "2027-03-26",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2027-04-21",
+        "label": "Tiradentes"
+      },
+      {
+        "date": "2027-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2027-05-27",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-03-27",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-05-28",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-05-29",
+        "label": "Dias não letivos"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.1",
+    "campus": "curitibanos",
+    "startDate": "2027-03-01",
+    "endDate": "2027-07-09",
+    "weeks": 19,
+    "recoveryStart": "2027-07-05",
+    "recoveryEnd": "2027-07-09",
+    "recessStart": "2027-07-10",
+    "classDaysByWeekday": [
+      19,
+      19,
+      18,
+      18,
+      16,
+      15
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-03-26",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2027-04-21",
+        "label": "Tiradentes"
+      },
+      {
+        "date": "2027-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2027-05-27",
+        "label": "Corpus Christi"
+      },
+      {
+        "date": "2027-06-11",
+        "label": "Aniversário da Cidade"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-03-27",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-05-28",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-05-29",
+        "label": "Dias não letivos"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.1",
+    "campus": "florianopolis",
+    "startDate": "2027-03-01",
+    "endDate": "2027-07-09",
+    "weeks": 19,
+    "recoveryStart": "2027-07-05",
+    "recoveryEnd": "2027-07-09",
+    "recessStart": "2027-07-10",
+    "classDaysByWeekday": [
+      19,
+      18,
+      18,
+      18,
+      17,
+      15
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-03-23",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2027-03-26",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2027-04-21",
+        "label": "Tiradentes"
+      },
+      {
+        "date": "2027-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2027-05-27",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-03-27",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-05-28",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-05-29",
+        "label": "Dias não letivos"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.1",
+    "campus": "joinville",
+    "startDate": "2027-03-01",
+    "endDate": "2027-07-09",
+    "weeks": 19,
+    "recoveryStart": "2027-07-05",
+    "recoveryEnd": "2027-07-09",
+    "recessStart": "2027-07-10",
+    "classDaysByWeekday": [
+      19,
+      18,
+      18,
+      18,
+      17,
+      15
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-03-09",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2027-03-26",
+        "label": "Sexta-Feira Santa"
+      },
+      {
+        "date": "2027-04-21",
+        "label": "Tiradentes"
+      },
+      {
+        "date": "2027-05-01",
+        "label": "Dia do Trabalho"
+      },
+      {
+        "date": "2027-05-27",
+        "label": "Corpus Christi"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-03-27",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-05-28",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-05-29",
+        "label": "Dias não letivos"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.2",
+    "campus": "ararangua",
+    "startDate": "2027-08-02",
+    "endDate": "2027-12-15",
+    "weeks": 20,
+    "recoveryStart": "2027-12-13",
+    "recoveryEnd": "2027-12-15",
+    "recessStart": "2027-12-17",
+    "classDaysByWeekday": [
+      16,
+      17,
+      20,
+      18,
+      18,
+      16
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2027-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2027-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2027-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2027-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2027-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      {
+        "date": "2027-12-04",
+        "label": "Data reservada – COPERVE"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-09-06",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-10-11",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-29",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-30",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-11-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.2",
+    "campus": "blumenau",
+    "startDate": "2027-08-02",
+    "endDate": "2027-12-15",
+    "weeks": 20,
+    "recoveryStart": "2027-12-13",
+    "recoveryEnd": "2027-12-15",
+    "recessStart": "2027-12-17",
+    "classDaysByWeekday": [
+      16,
+      17,
+      20,
+      17,
+      18,
+      16
+    ],
+    "totalClassDays": 104,
+    "holidays": [
+      {
+        "date": "2027-09-02",
+        "label": "Aniversário da Cidade"
+      },
+      {
+        "date": "2027-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2027-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2027-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2027-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2027-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2027-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      {
+        "date": "2027-12-04",
+        "label": "Data reservada – COPERVE"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-09-06",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-10-11",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-29",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-30",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-11-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.2",
+    "campus": "curitibanos",
+    "startDate": "2027-08-02",
+    "endDate": "2027-12-15",
+    "weeks": 20,
+    "recoveryStart": "2027-12-13",
+    "recoveryEnd": "2027-12-15",
+    "recessStart": "2027-12-17",
+    "classDaysByWeekday": [
+      16,
+      17,
+      19,
+      18,
+      18,
+      16
+    ],
+    "totalClassDays": 104,
+    "holidays": [
+      {
+        "date": "2027-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2027-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2027-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2027-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2027-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2027-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      {
+        "date": "2027-12-04",
+        "label": "Data reservada – COPERVE"
+      },
+      {
+        "date": "2027-12-08",
+        "label": "Dia da Padroeira da Cidade"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-09-06",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-10-11",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-29",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-30",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-11-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.2",
+    "campus": "florianopolis",
+    "startDate": "2027-08-02",
+    "endDate": "2027-12-15",
+    "weeks": 20,
+    "recoveryStart": "2027-12-13",
+    "recoveryEnd": "2027-12-15",
+    "recessStart": "2027-12-17",
+    "classDaysByWeekday": [
+      16,
+      17,
+      20,
+      18,
+      18,
+      16
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2027-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2027-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2027-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2027-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2027-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      {
+        "date": "2027-12-04",
+        "label": "Data reservada – COPERVE"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-09-06",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-10-11",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-29",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-30",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-11-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  },
+  {
+    "semester": "2027.2",
+    "campus": "joinville",
+    "startDate": "2027-08-02",
+    "endDate": "2027-12-15",
+    "weeks": 20,
+    "recoveryStart": "2027-12-13",
+    "recoveryEnd": "2027-12-15",
+    "recessStart": "2027-12-17",
+    "classDaysByWeekday": [
+      16,
+      17,
+      20,
+      18,
+      18,
+      16
+    ],
+    "totalClassDays": 105,
+    "holidays": [
+      {
+        "date": "2027-09-07",
+        "label": "Independência do Brasil"
+      },
+      {
+        "date": "2027-10-12",
+        "label": "Nossa Senhora Aparecida"
+      },
+      {
+        "date": "2027-10-28",
+        "label": "Dia do Servidor Público"
+      },
+      {
+        "date": "2027-11-02",
+        "label": "Finados"
+      },
+      {
+        "date": "2027-11-15",
+        "label": "Proclamação da República"
+      },
+      {
+        "date": "2027-11-20",
+        "label": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      {
+        "date": "2027-12-04",
+        "label": "Data reservada – COPERVE"
+      }
+    ],
+    "nonClassDays": [
+      {
+        "date": "2027-09-06",
+        "label": "Dia não letivo"
+      },
+      {
+        "date": "2027-10-11",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-29",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-10-30",
+        "label": "Dias não letivos"
+      },
+      {
+        "date": "2027-11-01",
+        "label": "Dia não letivo"
+      }
+    ],
+    "source": {
+      "resolution": "Resolução nº 233/2026/CUn",
+      "url": "https://dae.ufsc.br/files/2026/11/R233-2026-CUn_Calend%C3%A1rio-Acad%C3%AAmico-de-Gradua%C3%A7%C3%A3o_2027-assinado.df_.pdf",
+      "sha256": "8621e8147b2c5ced3b447e2680b7e951fccbeb3826e87e428f71b9adc9a2ac5a",
+      "year": 2027,
+      "fetchedAt": "2026-11-24T19:38:36.682Z"
+    }
+  }
+]
