@@ -7,6 +7,10 @@ name: Calendário Acadêmico
 # commitado via deploy key SSH — o push conta como atividade e impede o GitHub de
 # desabilitar os workflows agendados (regra dos 60 dias); o diff do JSON também é o
 # jeito de enxergar alterações do calendário no meio do ano.
+#
+# Dois jobs: `calendario` roda bun install + o pipeline SEM a deploy key (dependência
+# comprometida não consegue pushar) e publica os snapshots como artifact; `commit` faz
+# checkout com a deploy key e só roda comandos git.
 
 on:
   workflow_dispatch:
@@ -22,6 +26,9 @@ on:
   schedule:
     - cron: "0 13 * * 1" # toda segunda 10:00 BRT (13:00 UTC)
 
+permissions:
+  contents: read
+
 concurrency:
   group: calendario
   cancel-in-progress: false
@@ -29,18 +36,15 @@ concurrency:
 jobs:
   calendario:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      # Checkout via deploy key SSH (o GITHUB_TOKEN não conta como atividade). `ref: main`
-      # garante a ponta da branch mesmo em reruns.
-      - uses: actions/checkout@v4
+      # Sem deploy key e sem credencial persistida: este job roda dependências de terceiros.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
-          ssh-key: ${{ secrets.CALENDAR_COMMIT_SSH_KEY }}
           ref: main
-      - uses: oven-sh/setup-bun@v2
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
-          bun-version: latest
+          bun-version: 1.4.5
       - run: bun install --frozen-lockfile
       - name: Testes
         run: bun test
@@ -50,21 +54,53 @@ jobs:
           EVENTS_ADMIN_TOKEN: ${{ secrets.EVENTS_ADMIN_TOKEN }}
           CONVEX_SITE_URL: ${{ secrets.CONVEX_SITE_URL }}
           INGEST_API_KEY: ${{ secrets.INGEST_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          YEAR: ${{ inputs.year }}
         run: |
-          ARGS=""
-          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
-          if [ -n "${{ inputs.year }}" ]; then ARGS="$ARGS --year ${{ inputs.year }}"; fi
-          bun src/index.ts $ARGS
-      - name: Commit do snapshot (keep-alive)
+          ARGS=()
+          if [ "$DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
+          if [ -n "$YEAR" ]; then ARGS+=(--year "$YEAR"); fi
+          bun src/index.ts "${ARGS[@]}"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: ${{ inputs.dry_run != true }}
+        with:
+          name: snapshot-calendario
+          path: data/calendario-*.json
+          if-no-files-found: error
+          overwrite: true # reruns reenviam o mesmo nome
+
+  commit:
+    name: Commit do snapshot (keep-alive)
+    needs: calendario
+    if: ${{ inputs.dry_run != true }}
+    runs-on: ubuntu-latest
+    # O push usa a deploy key (SSH), não o GITHUB_TOKEN → basta leitura.
+    # Este job só roda comandos git: nada de bun install / código de terceiros aqui.
+    steps:
+      # Checkout via deploy key SSH (o GITHUB_TOKEN não conta como atividade). `ref: main`
+      # garante a ponta da branch mesmo em reruns.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ssh-key: ${{ secrets.CALENDAR_COMMIT_SSH_KEY }}
+          ref: main
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: snapshot-calendario
+          path: ${{ runner.temp }}/snapshot
+      - name: Commit e push
+        env:
+          SNAPSHOT_DIR: ${{ runner.temp }}/snapshot
         run: |
           git config user.name "calendario-ufsc-bot"
           git config user.email "calendario-ufsc-bot@users.noreply.github.com"
+          # À prova de corrida/rerun: realinha na ponta da main e reconstrói o commit por cima.
           for i in 1 2 3; do
             git fetch origin main
-            git stash push -u -- data >/dev/null 2>&1 || true
             git checkout -B main origin/main
-            git stash pop >/dev/null 2>&1 || true
+            mkdir -p data
+            for f in "$SNAPSHOT_DIR"/calendario-*.json; do
+              [ -e "$f" ] && cp "$f" data/
+            done
             date -u +"%Y-%m-%dT%H:%M:%SZ" > data/last-run.txt
             git add data/
             if git diff --cached --quiet; then
