@@ -41,6 +41,12 @@ export interface SemesterCalendar {
   holidays: DatedLabel[];
   /** "Dias não letivos" declarados pelo calendário, dentro do semestre. */
   nonClassDays: DatedLabel[];
+  /**
+   * YYYY-MM-DD — último "Resultado dos ajustes de matrícula" antes do início das aulas
+   * (DAE). A partir daí a grade do semestre já está no CAGR: o app usa para pedir a
+   * importação da nova grade. null quando o PDF não traz a linha.
+   */
+  enrollmentResultDate: string | null;
   source: SourceInfo;
 }
 
@@ -93,6 +99,12 @@ export interface ParsedCalendar {
   anchors: SemesterAnchor[];
   recoveries: { day1: number; day2: number }[];
   recesses: number[];
+  /**
+   * "12 DAE e coordenadorias – Resultado dos ajustes de matrícula realizados de 04 a 09 de
+   * fevereiro." → dia do resultado + mês/último dia do período de ajustes (o mês do
+   * resultado sai daí: a posição no texto não é confiável).
+   */
+  enrollmentResults: { day: number; adjustmentMonth: number; adjustmentLastDay: number }[];
   /** Dias do vestibular ("NN e NN COPERVE – Período reservado ao Vestibular"), por ocorrência. */
   vestibular: number[][];
   /** Totais declarados: "TOTAL DE DIAS LETIVOS NO PRIMEIRO SEMESTRE – 2026.1" + linhas de campi. */

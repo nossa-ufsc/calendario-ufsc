@@ -83,6 +83,10 @@ const RE_ANCORA =
 const RE_RECUPERACAO = /^(\d{1,2}) a (\d{1,2}) Per[ií]odo de recupera[çc][ãa]o/i;
 const RE_RECESSO = /^(\d{1,2}) In[ií]cio do recesso escolar/i;
 const RE_VESTIBULAR = /^(\d{1,2}) e (\d{1,2}) .*COPERVE.*Vestibular/i;
+// "12 DAE e coordenadorias – Resultado dos ajustes de matrícula realizados de 04 a 09 de fevereiro."
+// "25 DAE e coordenadorias – Resultado dos ajustes de matrícula on-line realizados em 19 e 20 de" ↵ "fevereiro."
+const RE_RESULTADO_AJUSTE =
+  /^(\d{1,2}) .*Resultado dos ajustes de matr[ií]culas?(?: on-?line)? realizad[oa]s (?:de|em) (\d{1,2})(?: (?:a|e) (\d{1,2}))? de ?([A-Za-zÀ-ú]*)/i;
 const RE_TOTAL_SEMESTRE = /^TOTAL DE DIAS LETIVOS NO (PRIMEIRO|SEGUNDO) SEMESTRE – (\d{4}\.[12])/i;
 const RE_TOTAL_CAMPI = /^([A-Za-zÀ-ú ,]+?) – (\d{2,3})$/;
 const RE_RESOLUCAO = /RESOLU[ÇC][ÃA]O(?: NORMATIVA)? N[ºo°.]?\s*(\d+\/[\w\d]+\/[\w\d]+)/i;
@@ -105,6 +109,7 @@ export function parseCalendario(texto: string, anoEsperado?: number): ParsedCale
   const recoveries: { day1: number; day2: number }[] = [];
   const recesses: number[] = [];
   const vestibular: number[][] = [];
+  const enrollmentResults: ParsedCalendar['enrollmentResults'] = [];
   const declaredTotals: ParsedCalendar['declaredTotals'] = {};
 
   let mesAtual: MonthTable | null = null;
@@ -174,6 +179,21 @@ export function parseCalendario(texto: string, anoEsperado?: number): ParsedCale
     const mVest = l.match(RE_VESTIBULAR);
     if (mVest) {
       vestibular.push([Number(mVest[1]), Number(mVest[2])]);
+      continue;
+    }
+    const mAjuste = l.match(RE_RESULTADO_AJUSTE);
+    if (mAjuste) {
+      const [, dia, de, ate] = mAjuste;
+      // O nome do mês pode ter quebrado para a linha seguinte.
+      const nomeMes = (mAjuste[4] || (linhas[i + 1] ?? '').split(/[ .,]/)[0]).toUpperCase();
+      const mes = MESES[nomeMes];
+      if (mes !== undefined) {
+        enrollmentResults.push({
+          day: Number(dia),
+          adjustmentMonth: mes,
+          adjustmentLastDay: Number(ate ?? de),
+        });
+      }
       continue;
     }
     const mTotSem = l.match(RE_TOTAL_SEMESTRE);
@@ -303,5 +323,15 @@ export function parseCalendario(texto: string, anoEsperado?: number): ParsedCale
       throw new Error('Não foi possível determinar o ano do calendário');
     })();
 
-  return { year, resolution, months, anchors, recoveries, recesses, vestibular, declaredTotals };
+  return {
+    year,
+    resolution,
+    months,
+    anchors,
+    recoveries,
+    recesses,
+    vestibular,
+    enrollmentResults,
+    declaredTotals,
+  };
 }

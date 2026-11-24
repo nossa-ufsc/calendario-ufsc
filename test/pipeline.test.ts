@@ -153,6 +153,28 @@ describe('extração do PDF real', () => {
   });
 });
 
+describe('resultado dos ajustes de matrícula (quando a grade nova já está no CAGR)', () => {
+  test('último resultado antes do início das aulas, inclusive a rodada on-line', async () => {
+    const expected: [string, number, string, string][] = [
+      ['2024-r183', 2024, '2024.1', '2024-02-15'],
+      ['2024', 2024, '2024.2', '2024-08-26'], // pós-greve: resultado no próprio dia do início
+      ['2025', 2025, '2025.1', '2025-02-24'], // rodada on-line (24/02) vence a 2ª etapa (13/02)
+      ['2025', 2025, '2025.2', '2025-07-31'],
+      ['2026', 2026, '2026.1', '2026-02-25'], // "realizados em 19 e 20 de" ↵ "fevereiro."
+      ['2026', 2026, '2026.2', '2026-07-30'],
+      ['2027', 2027, '2027.1', '2027-02-23'],
+      ['2027', 2027, '2027.2', '2027-07-26'],
+    ];
+    for (const [fixture, year, semester, date] of expected) {
+      const t = await Bun.file(`${import.meta.dir}/fixtures/calendario-${fixture}.txt`).text();
+      const r = processarTexto(t, src(year));
+      for (const c of r.calendars.filter((c) => c.semester === semester)) {
+        expect(`${semester}/${c.campus}: ${c.enrollmentResultDate}`).toBe(`${semester}/${c.campus}: ${date}`);
+      }
+    }
+  });
+});
+
 describe('robustez', () => {
   test('texto sem semestres falha com problema, não com exceção', () => {
     const r = processarTexto('nada a ver', src(2026));

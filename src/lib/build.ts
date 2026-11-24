@@ -53,6 +53,23 @@ function anchorFor(parsed: ParsedCalendar, ordinal: 1 | 2, kind: 'start' | 'end'
   return null;
 }
 
+/**
+ * Data a partir da qual a grade do semestre já está no CAGR: o último resultado de
+ * ajustes de matrícula até o início das aulas (há a 2ª etapa e, às vezes, uma rodada
+ * on-line depois dela). Sem nenhum antes do início, o primeiro logo depois.
+ */
+export function dataResultadoMatricula(parsed: ParsedCalendar, startDate: string): string | null {
+  const datas = parsed.enrollmentResults.map((r) => {
+    // Resultado sai depois do fim do período de ajustes: dia menor → mês seguinte.
+    const mes = r.day >= r.adjustmentLastDay ? r.adjustmentMonth : r.adjustmentMonth + 1;
+    return mes > 12 ? iso(parsed.year + 1, mes - 12, r.day) : iso(parsed.year, mes, r.day);
+  });
+  const antes = datas.filter((d) => d >= addDays(startDate, -60) && d <= startDate).sort();
+  if (antes.length > 0) return antes[antes.length - 1];
+  const depois = datas.filter((d) => d > startDate && d <= addDays(startDate, 14)).sort();
+  return depois[0] ?? null;
+}
+
 export interface BuildOptions {
   /**
    * Trata os dias do vestibular (COPERVE) como dias não letivos. O PDF não os lista
@@ -159,6 +176,7 @@ export function montarCalendarios(
         totalClassDays: classDaysByWeekday.reduce((a, b) => a + b, 0),
         holidays: feriados,
         nonClassDays: naoLetivos,
+        enrollmentResultDate: dataResultadoMatricula(parsed, startDate),
         source,
       });
     }

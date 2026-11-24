@@ -19,7 +19,12 @@ export async function upsertCalendarios(cfg: AdminConfig, calendars: SemesterCal
   const res = await fetch(cfg.url, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-admin-token': cfg.token },
-    body: JSON.stringify({ action: 'calendar-upsert', calendars }),
+    // `enrollmentResultDate` só existe no Convex (a tabela do Supabase não tem a coluna
+    // e o calendar-upsert valida estritamente).
+    body: JSON.stringify({
+      action: 'calendar-upsert',
+      calendars: calendars.map(({ enrollmentResultDate: _, ...rest }) => rest),
+    }),
     signal: AbortSignal.timeout(60_000),
   });
   const body = await res.text();
