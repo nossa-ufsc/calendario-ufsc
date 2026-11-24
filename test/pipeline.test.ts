@@ -72,6 +72,21 @@ describe('calendário 2026', () => {
   });
 });
 
+describe('calendário 2027 (dias não letivos em lista com vírgulas)', () => {
+  test('"11, 29 e 30 – Dias não letivos" em outubro vira três dias não letivos', async () => {
+    const r = processarTexto(await texto(2027), src(2027));
+    expect(r.problemas).toEqual([]);
+    expect(r.parsed.resolution).toBe('Resolução nº 233/2026/CUn');
+    expect(r.calendars).toHaveLength(10);
+    const fln2 = pick(r.calendars, '2027.2', 'florianopolis');
+    expect(fln2.nonClassDays.map((h) => h.date)).toEqual(
+      expect.arrayContaining(['2027-10-11', '2027-10-29', '2027-10-30']),
+    );
+    expect(fln2.holidays.map((h) => h.date)).not.toContain('2027-10-11');
+    expect(pick(r.calendars, '2027.1', 'florianopolis').startDate).toBe('2027-03-01');
+  });
+});
+
 describe('calendário 2025 (com alterações homologadas)', () => {
   test('Blumenau tem início/término próprios no 2º semestre', async () => {
     const r = processarTexto(await texto(2025), src(2025));

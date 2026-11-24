@@ -12,6 +12,7 @@
 //   (Campus de Joinville)           ← qualificador de campus (na mesma linha ou na seguinte,
 //   Dias não letivos                   às vezes quebrado: "(Campus" / "de Joinville)")
 //   04 e 20 – Dias não letivos
+//   11, 29 e 30 – Dias não letivos  ← lista com vírgulas (2027)
 //   Total de dias letivos 2026.1    ← diz a que semestre o mês pertence e fecha a caixinha
 //
 // e, no fluxo de eventos:
@@ -73,7 +74,8 @@ export function normalizarTexto(texto: string): string[] {
 const RE_MES = /^([A-ZÇ]+) (\d{4})$/;
 const RE_LINHA_CAMPUS = /^(ARA|BLU|CBN|FLN|JOI) (\d{1,2}) (\d{1,2}) (\d{1,2}) (\d{1,2}) (\d{1,2}) (\d{1,2})$/;
 const RE_TOTAL_MES = /^Total de dias letivos (\d{4}\.[12])/;
-const RE_DIA_ROTULO = /^(\d{1,2})(?: e (\d{1,2}))? ?– ?(.+)$/;
+// "09 – …", "04 e 20 – …" ou lista com vírgulas "11, 29 e 30 – …" (2027).
+const RE_DIA_ROTULO = /^(\d{1,2}(?:(?:, ?| e )\d{1,2})*) ?– ?(.+)$/;
 const RE_QUALIFICADOR = /\((Campus[^)]*)\)/i;
 
 const RE_ANCORA =
@@ -242,9 +244,8 @@ export function parseCalendario(texto: string, anoEsperado?: number): ParsedCale
     const mDia = l.match(RE_DIA_ROTULO);
     if (!mDia) continue; // ex.: "(Lei nº 8.112 – art. 236)", "Total de dias…" já tratado
 
-    const dias = [Number(mDia[1])];
-    if (mDia[2]) dias.push(Number(mDia[2]));
-    let label = mDia[3].trim();
+    const dias = mDia[1].split(/, ?| e /).map(Number);
+    let label = mDia[2].trim();
 
     // Parêntese aberto e não fechado → continua na(s) linha(s) seguinte(s).
     let guarda = 0;
