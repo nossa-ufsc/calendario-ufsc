@@ -23,8 +23,9 @@ on:
         description: "Ano específico (vazio = ano corrente + próximo)"
         type: string
         default: ""
-  schedule:
-    - cron: "0 13 * * 1" # toda segunda 10:00 BRT (13:00 UTC)
+  # Sem schedule desde 2026-11-24: dae.ufsc.br recusa conexão dos runners do GitHub, então
+  # a execução agendada roda no cron do VPS (/opt/calendario-runner/run.sh, segunda 10:00
+  # BRT), que também commita o snapshot. Este workflow fica para rodar à mão.
 
 permissions:
   contents: read
