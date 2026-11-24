@@ -8,6 +8,7 @@
 import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { adminConfigDoAmbiente, upsertCalendarios } from './lib/admin';
+import { enviarCalendariosParaConvex } from './lib/convex';
 import { listarCalendarios } from './lib/dae';
 import { fetchBinary } from './lib/http';
 import { extrairTexto } from './lib/pdf';
@@ -108,6 +109,18 @@ async function main() {
   if (publicados.length > 0 && !dryRun && !skipDb && admin) {
     const res = await upsertCalendarios(admin, publicados);
     console.log(`\n✓ Supabase: ${res.upserted ?? publicados.length} registro(s) upsertados via events-admin`);
+
+    // Transição Supabase → Convex: cópia best-effort, não falha o job.
+    try {
+      const enviados = await enviarCalendariosParaConvex(publicados);
+      console.log(
+        enviados === 'sem-config'
+          ? '• CONVEX_SITE_URL/INGEST_API_KEY ausentes: envio ao Convex pulado'
+          : `✓ Convex: ${enviados} registro(s) enviados`
+      );
+    } catch (e) {
+      console.error(`⚠ Convex: ${e instanceof Error ? e.message : e}`);
+    }
   } else if (publicados.length > 0) {
     console.log(`\n(${dryRun ? '--dry-run' : '--skip-db'}: nada enviado ao Supabase)`);
   }

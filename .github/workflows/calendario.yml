@@ -48,6 +48,8 @@ jobs:
         env:
           EVENTS_ADMIN_URL: ${{ secrets.EVENTS_ADMIN_URL }}
           EVENTS_ADMIN_TOKEN: ${{ secrets.EVENTS_ADMIN_TOKEN }}
+          CONVEX_SITE_URL: ${{ secrets.CONVEX_SITE_URL }}
+          INGEST_API_KEY: ${{ secrets.INGEST_API_KEY }}
         run: |
           ARGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
